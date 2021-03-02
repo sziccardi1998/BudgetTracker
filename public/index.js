@@ -1,3 +1,15 @@
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+    .register('service-worker.js')
+    .then((registration) => {
+      console.log('The service worker has been registered!');
+    })
+    .catch((error) => {
+      console.log('Sorry, the service worker registration failed!');
+      console.log(error);
+    });
+}
+
 let transactions = [];
 let myChart;
 
